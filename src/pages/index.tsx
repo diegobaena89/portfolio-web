@@ -1,11 +1,5 @@
-import Navbar from "../components/navbar";
-import { HomeContainer, MainContainer } from "../styles/Home";
+import { SectionContainer } from "../styles/global";
 
 export default function Home() {
-  return (
-    <MainContainer>
-      <HomeContainer>Home</HomeContainer>
-      <Navbar />
-    </MainContainer>
-  );
+  return <SectionContainer>Home</SectionContainer>;
 }

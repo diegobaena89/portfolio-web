@@ -1,8 +1,16 @@
 import type { AppProps } from "next/app";
-import { globalStyles } from "../styles/global";
+import { MainContainer, globalStyles } from "../styles/global";
+import Navbar from "../components/navbar";
 
 globalStyles();
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <MainContainer>
+        <Navbar />
+        <Component {...pageProps} />
+      </MainContainer>
+    </>
+  );
 }

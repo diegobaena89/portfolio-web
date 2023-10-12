@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.3",
     "@stitches/react": "^1.2.8",
     "next": "13.5.4",
     "react": "^18",
