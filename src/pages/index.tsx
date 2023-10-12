@@ -1,3 +1,11 @@
+import Navbar from "../components/navbar";
+import { HomeContainer, MainContainer } from "../styles/Home";
+
 export default function Home() {
-  return <h1>Portfolio</h1>;
+  return (
+    <MainContainer>
+      <HomeContainer>Home</HomeContainer>
+      <Navbar />
+    </MainContainer>
+  );
 }
