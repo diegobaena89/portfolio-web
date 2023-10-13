@@ -9,7 +9,7 @@ export const globalStyles = globalCss({
   },
 
   body: {
-    backgroundColor: "$background",
+    backgroundColor: "$background !important",
     color: "$gray900",
     "-webkit-font-smoothing": "antialiased",
     display: "flex",
@@ -19,6 +19,10 @@ export const globalStyles = globalCss({
 
   "body, input, button, textarea": {
     font: "400 16px Roboto, sans-serif",
+  },
+
+  "a:visited": {
+    color: "$white",
   },
 });
 
@@ -33,11 +37,11 @@ export const MainContainer = styled("div", {
 export const SectionContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  padding: "1.5rem",
+  padding: "2rem",
   height: "80vh",
   width: "80vw",
 
-  backgroundColor: "$white",
+  backgroundColor: "$white !important",
   borderRadius: "1rem 0 0 1rem",
   border: "1px solid $gray100",
   boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
