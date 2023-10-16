@@ -1,6 +1,8 @@
 import JobCard from "@/src/components/JobCard";
 import { JobContainer } from "../../styles/Jobs";
 import { Box } from "@chakra-ui/react";
+import ProjectsTabs from "@/src/components/projectsTabs";
+import { projectData } from "@/src/mocks/projectData";
 
 export default function Jobs() {
   return (
@@ -42,15 +44,8 @@ export default function Jobs() {
 
       <Box className="projects">
         <h2>projects</h2>
-        <Box
-          p={4}
-          display={"flex"}
-          flexWrap={"wrap"}
-          gap={8}
-          alignItems={"center"}
-          justifyContent={"center"}
-        >
-          test
+        <Box>
+          <ProjectsTabs projects={projectData} />
         </Box>
       </Box>
     </JobContainer>

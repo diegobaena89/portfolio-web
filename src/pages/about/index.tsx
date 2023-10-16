@@ -1,5 +1,5 @@
 import { AboutContainer } from "@/src/styles/About";
-import { Box, Divider, Text, Tooltip } from "@chakra-ui/react";
+import { Box, Text, Tooltip } from "@chakra-ui/react";
 import Link from "next/link";
 import {
   GithubLogo,
@@ -22,18 +22,24 @@ export default function About() {
         </h1>
         <Box marginTop={"-40px"}>
           <Box className="photo"></Box>
-          <Text fontSize={16} maxWidth={650} paddingBottom={4}>
+          <Text fontSize={14} maxWidth={650} paddingBottom={4}>
             Hello! {presentation} , Brazil. My academic journey covers a wide
             range of fields. I have a background in Music, Literature, Analysis,
             and System Development. Additionally, {degree}.
           </Text>
-          <Text fontSize={16} maxWidth={650} paddingBottom={4}>
+          <Text fontSize={14} maxWidth={650} paddingBottom={4}>
             Today, I am a passionate frontend developer. For me, software
             development is not just a profession; {skills}. I collaborate with
             teams to craft engaging, functional interfaces connecting people to
             the digital world. My commitment to continuous learning and
             multidisciplinary approach provide a unique perspective when
             tackling software development challenges.
+          </Text>
+
+          <Text fontSize={14} maxWidth={650} paddingBottom={4}>
+            I thrive on the opportunity to marry my creative and technical
+            skills, constantly pushing the boundaries of whats possible in the
+            ever-evolving world of technology.
           </Text>
 
           <Box

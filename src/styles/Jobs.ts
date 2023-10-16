@@ -12,7 +12,7 @@ export const JobContainer = styled(SectionContainer, {
     h1: {
       fontFamily: "Poppins, sans-serif",
       color: "transparent",
-      fontSize: "4.5rem",
+      fontSize: "3.5rem",
       textTransform: "uppercase",
       letterSpacing: "0.2rem",
       fontWeight: 700,
@@ -23,7 +23,7 @@ export const JobContainer = styled(SectionContainer, {
     strong: {
       fontFamily: "Poppins, sans-serif",
       color: "white",
-      fontSize: "4.5rem",
+      fontSize: "3.5rem",
       textTransform: "uppercase",
       letterSpacing: "0.2rem",
       fontWeight: 700,
@@ -41,7 +41,7 @@ export const JobContainer = styled(SectionContainer, {
     h2: {
       fontFamily: "Poppins, sans-serif",
       color: "#f69d7b",
-      fontSize: "4.5rem",
+      fontSize: "3.5rem",
       textTransform: "uppercase",
       letterSpacing: "0.2rem",
       fontWeight: 700,

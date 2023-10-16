@@ -37,7 +37,7 @@ export const MainContainer = styled("div", {
 export const SectionContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  padding: "1rem",
+  padding: "2rem",
   height: "80vh",
   width: "80vw",
 

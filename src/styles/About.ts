@@ -8,12 +8,11 @@ export const AboutContainer = styled(SectionContainer, {
     flex: 1,
     display: "flex",
     flexDirection: "column",
-    // justifyContent: "space-between",
 
     h1: {
       fontFamily: "Poppins, sans-serif",
       color: "transparent",
-      fontSize: "4.5rem",
+      fontSize: "3.5rem",
       textTransform: "uppercase",
       letterSpacing: "0.2rem",
       fontWeight: 700,
@@ -24,7 +23,7 @@ export const AboutContainer = styled(SectionContainer, {
     strong: {
       fontFamily: "Poppins, sans-serif",
       color: "white",
-      fontSize: "4.5rem",
+      fontSize: "3.5rem",
       textTransform: "uppercase",
       letterSpacing: "0.2rem",
       fontWeight: 700,
@@ -51,7 +50,7 @@ export const AboutContainer = styled(SectionContainer, {
     h2: {
       fontFamily: "Poppins, sans-serif",
       color: "$lemon500",
-      fontSize: "4.5rem",
+      fontSize: "3.5rem",
       textTransform: "uppercase",
       letterSpacing: "0.2rem",
       fontWeight: 700,

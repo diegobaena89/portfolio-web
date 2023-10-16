@@ -7,7 +7,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 globalStyles();
 
 export const metadata = {
-  title: "Diego Baena Portfolio",
+  title: "Portfolio | Diego Baena",
   description: "Software Developer",
 };
 

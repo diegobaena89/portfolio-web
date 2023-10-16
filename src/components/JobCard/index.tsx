@@ -1,4 +1,4 @@
-import { Box, Card, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { JobUnitCard } from "./styles";
 
 interface JobCardProps {

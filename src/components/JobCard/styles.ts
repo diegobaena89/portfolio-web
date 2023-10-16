@@ -2,8 +2,8 @@ import { Card } from "@chakra-ui/react";
 import { styled } from "@stitches/react";
 
 export const JobUnitCard = styled(Card, {
-  padding: "10px",
-  margin: "15px 0",
+  padding: "12px",
+  margin: "25px 0",
   cursor: "pointer",
   width: "95%",
 
@@ -24,11 +24,12 @@ export const JobUnitCard = styled(Card, {
   },
   ".position": {
     fontFamily: "Poppins, sans-serif",
-    fontWeight: 700,
     color: "$gray500",
+    fontSize: "14px",
   },
   ".description": {
     fontFamily: "Poppins, sans-serif",
-    color: "$gray600",
+    color: "$gray700",
+    fontSize: "14px",
   },
 });
