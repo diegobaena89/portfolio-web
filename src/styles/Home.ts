@@ -57,12 +57,15 @@ export const HomeContainer = styled(SectionContainer, {
       marginRight: "1.2rem",
 
       h3: {
+        fontFamily: "Poppins, sans-serif",
         textTransform: "uppercase",
         whiteSpace: "pre-line",
         fontSize: "2.5rem",
         lineHeight: "1",
-        letterSpacing: "0.2rem",
-        color: "$orange600",
+        letterSpacing: "0.3rem",
+        color: "transparent",
+        fontWeight: 600,
+        "-webkit-text-stroke": "1px #f69d7b !important",
       },
     },
   },

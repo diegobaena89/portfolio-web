@@ -29,6 +29,8 @@ export const {
       orange700: "#f05d23",
       orange600: "#f16d38",
       orange400: "#f69d7b",
+      orange300: "#f5b9a2",
+      orange100: "#fcdfd4",
 
       lemon900: "#626c36",
       lemon700: "#9dac57",

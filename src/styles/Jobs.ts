@@ -1,14 +1,13 @@
 import { styled } from ".";
 import { SectionContainer } from "./global";
 
-export const AboutContainer = styled(SectionContainer, {
+export const JobContainer = styled(SectionContainer, {
   flexDirection: "row",
 
-  ".bio": {
+  ".jobs": {
     flex: 1,
     display: "flex",
     flexDirection: "column",
-    // justifyContent: "space-between",
 
     h1: {
       fontFamily: "Poppins, sans-serif",
@@ -18,7 +17,7 @@ export const AboutContainer = styled(SectionContainer, {
       letterSpacing: "0.2rem",
       fontWeight: 700,
       display: "inline-block",
-      "-webkit-text-stroke": "1px #d0d48a !important",
+      "-webkit-text-stroke": "1px #f69d7b !important",
     },
 
     strong: {
@@ -29,28 +28,19 @@ export const AboutContainer = styled(SectionContainer, {
       letterSpacing: "0.2rem",
       fontWeight: 700,
       display: "inline-block",
-      backgroundColor: "$lemon500",
+      backgroundColor: "#f69d7b",
       padding: "0 1rem 0 0",
-    },
-
-    p: {
-      fontFamily: "Poppins, sans-serif",
-    },
-
-    ".photo": {
-      width: "95%",
-      height: "80%",
-      border: "1px solid $lemon500",
-      margin: "1rem 0",
     },
   },
 
-  ".education": {
+  ".projects": {
     flex: 1,
+    display: "flex",
+    flexDirection: "column",
 
     h2: {
       fontFamily: "Poppins, sans-serif",
-      color: "$lemon500",
+      color: "#f69d7b",
       fontSize: "4.5rem",
       textTransform: "uppercase",
       letterSpacing: "0.2rem",

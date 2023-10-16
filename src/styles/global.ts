@@ -10,7 +10,7 @@ export const globalStyles = globalCss({
 
   body: {
     backgroundColor: "$background !important",
-    color: "$gray900",
+    color: "$gray700",
     "-webkit-font-smoothing": "antialiased",
     display: "flex",
     alignItems: "center",
@@ -37,7 +37,7 @@ export const MainContainer = styled("div", {
 export const SectionContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  padding: "2rem",
+  padding: "1rem",
   height: "80vh",
   width: "80vw",
 

@@ -7,13 +7,14 @@ export const NavbarContainer = styled("nav", {
   justifyContent: "space-between",
   width: "3.5vw",
   padding: "1rem",
-  height: "80vh",
+  // height: "auto",
+  minHeight: "80vh",
 
   backgroundColor: "$lemon700",
   borderRadius: "0 1rem 1rem 0",
 
   div: {
-    height: "32vh",
+    height: "25vh",
     display: "flex",
     marginTop: "2rem",
     flexDirection: "column",
