@@ -50,10 +50,7 @@ export default function Jobs() {
           alignItems={"center"}
           justifyContent={"center"}
         >
-          {/* <ProjectCard>Projeto 1</ProjectCard>
-          <ProjectCard>Projeto 1</ProjectCard>
-          <ProjectCard>Projeto 1</ProjectCard>
-          <ProjectCard>Projeto 1</ProjectCard> */}
+          test
         </Box>
       </Box>
     </JobContainer>
