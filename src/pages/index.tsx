@@ -1,5 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { HomeContainer } from "../styles/Home";
+import Image from "next/image";
+import Photo from "../assets/me.jpg";
 
 export default function Home() {
   return (
@@ -19,7 +21,11 @@ export default function Home() {
           <h3>diego</h3>
           <h3>baena</h3>
         </Box>
-        <Box className="photo-box"></Box>
+        <Box className="photo-box">
+          <div className="photo-overlay">
+            <Image src={Photo} alt="Me" className="photo" />
+          </div>
+        </Box>
       </Box>
     </HomeContainer>
   );

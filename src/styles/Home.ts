@@ -41,10 +41,26 @@ export const HomeContainer = styled(SectionContainer, {
     alignItems: "end",
 
     ".photo-box": {
-      backgroundColor: "$orange400",
+      position: "relative",
       flex: 3,
       display: "flex",
       height: "50%",
+    },
+
+    ".photo-overlay": {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      backgroundColor: "rgba(0, 0, 0, 0.5)",
+    },
+
+    ".photo": {
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      // filter: "grayscale(100%)",
     },
 
     ".name": {
@@ -54,7 +70,7 @@ export const HomeContainer = styled(SectionContainer, {
       alignIntem: "center",
       alignItems: "end",
       justifyContent: "end",
-      marginRight: "1.2rem",
+      marginRight: "0.2rem",
 
       h3: {
         fontFamily: "Poppins, sans-serif",

@@ -7,6 +7,8 @@ import {
   LinkedinLogo,
   MediumLogo,
 } from "@phosphor-icons/react";
+import EducationCard from "@/src/components/educationCard";
+import { education } from "../../mocks/educationMock";
 
 export default function About() {
   const presentation = "I'm Diego, a technology enthusiast based in São Paulo";
@@ -20,8 +22,7 @@ export default function About() {
         <h1>
           diego<strong>baena</strong>
         </h1>
-        <Box marginTop={"-40px"}>
-          <Box className="photo"></Box>
+        <Box margin="20px 0">
           <Text fontSize={14} maxWidth={650} paddingBottom={4}>
             Hello! {presentation} , Brazil. My academic journey covers a wide
             range of fields. I have a background in Music, Literature, Analysis,
@@ -118,9 +119,22 @@ export default function About() {
             </Link>
           </Box>
         </Box>
+        <Box className="photo"></Box>
       </Box>
       <Box className="education">
         <h2>education</h2>
+        <Box>
+          {education.map((item) => (
+            <>
+              <EducationCard
+                key={item.id}
+                institution={item.institution}
+                date={item.date}
+                course={item.course}
+              />
+            </>
+          ))}
+        </Box>
       </Box>
     </AboutContainer>
   );

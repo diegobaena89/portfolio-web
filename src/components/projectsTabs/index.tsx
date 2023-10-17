@@ -33,10 +33,12 @@ export default function ProjectsTabs({ projects }: ProjectsTabsProps) {
   const baseStyle = definePartsStyle({
     tablist: {
       fontFamily: "Poppins",
+      fontSize: "14px",
     },
 
-    tabpanel: {
-      color: "black",
+    tabpanels: {
+      fontFamily: "Poppins",
+      fontSize: "14px",
     },
   });
 
@@ -54,7 +56,7 @@ export default function ProjectsTabs({ projects }: ProjectsTabsProps) {
         ))}
       </TabList>
       <TabIndicator mt="-1.5px" height="2px" bg="#a8a8b3" borderRadius="1px" />
-      <TabPanels>
+      <TabPanels sx={baseStyle.tabpanels}>
         {projects.map((project) => (
           <TabPanel key={project.title}>
             <Card margin="20px 0">
