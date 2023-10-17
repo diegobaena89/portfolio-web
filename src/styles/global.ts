@@ -41,6 +41,11 @@ export const SectionContainer = styled("div", {
   height: "80vh",
   width: "80vw",
 
+  "@media only screen and (max-width: 1825px)": {
+    height: "auto",
+    minHeight: "80vh",
+  },
+
   backgroundColor: "$white !important",
   borderRadius: "1rem 0 0 1rem",
   border: "1px solid $gray100",

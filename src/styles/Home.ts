@@ -4,6 +4,10 @@ import { SectionContainer } from "./global";
 export const HomeContainer = styled(SectionContainer, {
   flexDirection: "row",
 
+  "@media only screen and (max-width: 1100px)": {
+    flexDirection: "column",
+  },
+
   ".bio": {
     flex: 1,
     display: "flex",
@@ -40,6 +44,13 @@ export const HomeContainer = styled(SectionContainer, {
     display: "flex",
     alignItems: "end",
 
+    "@media only screen and (max-width: 1100px)": {
+      ".sections": {
+        display: "contents",
+        alignItems: "initial",
+      },
+    },
+
     ".photo-box": {
       position: "relative",
       flex: 3,
@@ -60,7 +71,6 @@ export const HomeContainer = styled(SectionContainer, {
       width: "100%",
       height: "100%",
       objectFit: "cover",
-      // filter: "grayscale(100%)",
     },
 
     ".name": {

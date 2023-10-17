@@ -4,6 +4,10 @@ import { SectionContainer } from "./global";
 export const JobContainer = styled(SectionContainer, {
   flexDirection: "row",
 
+  "@media only screen and (max-width: 1025px)": {
+    flexDirection: "column",
+  },
+
   ".jobs": {
     flex: 1,
     display: "flex",

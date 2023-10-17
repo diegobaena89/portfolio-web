@@ -4,6 +4,10 @@ import { SectionContainer } from "./global";
 export const AboutContainer = styled(SectionContainer, {
   flexDirection: "row",
 
+  "@media only screen and (max-width: 1200px)": {
+    flexDirection: "column",
+  },
+
   ".bio": {
     flex: 1,
     display: "flex",
