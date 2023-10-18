@@ -3,6 +3,7 @@ import { MainContainer, globalStyles } from "../styles/global";
 import Navbar from "../components/navbar";
 import Head from "next/head";
 import { ChakraProvider } from "@chakra-ui/react";
+import { PortfolioProvider } from "../context/PortfolioContext";
 
 globalStyles();
 
@@ -15,13 +16,15 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <ChakraProvider>
-        <Head>
-          <title>{metadata.title}</title>
-        </Head>
-        <MainContainer>
-          <Navbar />
-          <Component {...pageProps} />
-        </MainContainer>
+        <PortfolioProvider>
+          <Head>
+            <title>{metadata.title}</title>
+          </Head>
+          <MainContainer>
+            <Navbar />
+            <Component {...pageProps} />
+          </MainContainer>
+        </PortfolioProvider>
       </ChakraProvider>
     </>
   );

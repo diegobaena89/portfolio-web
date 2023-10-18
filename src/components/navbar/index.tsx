@@ -1,9 +1,14 @@
 import { NavbarContainer } from "@/src/styles/Navbar";
-import { HouseLine, Notebook, User } from "@phosphor-icons/react";
+import { Globe, HouseLine, Notebook, User } from "@phosphor-icons/react";
 import { Tooltip } from "@chakra-ui/react";
 import Link from "next/link";
+import { useContext } from "react";
+import { PortfolioContext } from "@/src/context/PortfolioContext";
 
 export default function Navbar() {
+  const { handleToggle } = useContext(PortfolioContext)!;
+  const { locale } = useContext(PortfolioContext)!;
+  const LanguageLabel = locale === "en" ? "Greek" : "English";
   return (
     <NavbarContainer>
       <div>
@@ -42,6 +47,22 @@ export default function Navbar() {
             <Notebook size={27} weight="light" cursor={"pointer"} />
           </Tooltip>
         </Link>
+        <Tooltip
+          label={`Translate to  ${LanguageLabel}`}
+          aria-label="Translate"
+          color="white"
+          bg={"#626c36"}
+          border={"none"}
+          boxShadow={"none"}
+        >
+          <Globe
+            onClick={() => handleToggle()}
+            size={27}
+            weight="light"
+            cursor={"pointer"}
+            color="white"
+          />
+        </Tooltip>
       </div>
     </NavbarContainer>
   );

@@ -8,13 +8,19 @@ import {
   MediumLogo,
 } from "@phosphor-icons/react";
 import EducationCard from "@/src/components/educationCard";
-import { education } from "../../mocks/educationMock";
+
+import { useContext } from "react";
+import { PortfolioContext } from "@/src/context/PortfolioContext";
+import { enUS } from "@/src/languages/english/enUS";
+import { elGR } from "@/src/languages/greek/elGR";
+import objectToArray from "@/src/utils/objectToArray";
 
 export default function About() {
-  const presentation = "I'm Diego, a technology enthusiast based in São Paulo";
-  const degree =
-    "I hold a master's degree in Modern Greek Language and Literature.";
-  const skills = "it's a way to merge creativity with technical skills";
+  const { locale } = useContext(PortfolioContext)!;
+  const traduction = locale === "en" ? enUS : elGR;
+  const educationData = traduction.about.education;
+
+  const education = objectToArray(educationData);
 
   return (
     <AboutContainer>
@@ -24,23 +30,14 @@ export default function About() {
         </h1>
         <Box margin="20px 0">
           <Text fontSize={14} maxWidth={650} paddingBottom={4}>
-            Hello! {presentation} , Brazil. My academic journey covers a wide
-            range of fields. I have a background in Music, Literature, Analysis,
-            and System Development. Additionally, {degree}.
+            {traduction.about.bio.I}
           </Text>
           <Text fontSize={14} maxWidth={650} paddingBottom={4}>
-            Today, I am a passionate frontend developer. For me, software
-            development is not just a profession; {skills}. I collaborate with
-            teams to craft engaging, functional interfaces connecting people to
-            the digital world. My commitment to continuous learning and
-            multidisciplinary approach provide a unique perspective when
-            tackling software development challenges.
+            {traduction.about.bio.II}
           </Text>
 
           <Text fontSize={14} maxWidth={650} paddingBottom={4}>
-            I thrive on the opportunity to marry my creative and technical
-            skills, constantly pushing the boundaries of whats possible in the
-            ever-evolving world of technology.
+            {traduction.about.bio.III}
           </Text>
 
           <Box
@@ -122,9 +119,9 @@ export default function About() {
         <Box className="photo"></Box>
       </Box>
       <Box className="education">
-        <h2>education</h2>
+        <h2>{traduction.about.education.title}</h2>
         <Box>
-          {education.map((item) => (
+          {education.education.map((item) => (
             <>
               <EducationCard
                 key={item.id}

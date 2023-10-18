@@ -13,22 +13,18 @@ import {
 } from "@chakra-ui/react";
 import { CustomTabs, CustomButtom } from "./styles";
 import { tabsAnatomy } from "@chakra-ui/anatomy";
+import { useContext } from "react";
+import { PortfolioContext } from "@/src/context/PortfolioContext";
+import { enUS } from "@/src/languages/english/enUS";
+import { elGR } from "@/src/languages/greek/elGR";
+import objectToArray from "@/src/utils/objectToArray";
 
-interface Project {
-  title: string;
-  imgUrl: string;
-  description: string;
-  stack: string[];
-  githubLink: string;
-  deployLink: string;
-}
-
-interface ProjectsTabsProps {
-  projects: Project[];
-}
-
-export default function ProjectsTabs({ projects }: ProjectsTabsProps) {
+export default function ProjectsTabs() {
   const { definePartsStyle } = createMultiStyleConfigHelpers(tabsAnatomy.keys);
+  const { locale } = useContext(PortfolioContext)!;
+  const traduction = locale === "en" ? enUS : elGR;
+  const projectToContext = traduction.about.projects;
+  const projectData = objectToArray(projectToContext);
 
   const baseStyle = definePartsStyle({
     tablist: {
@@ -46,18 +42,23 @@ export default function ProjectsTabs({ projects }: ProjectsTabsProps) {
     window.open(url, "_blank");
   }
 
+  const dataProject = projectData.projects.map((project) => project);
+  console.log("DATAPROJECT", dataProject);
+
   return (
     <CustomTabs position="relative" variant="unstyled">
       <TabList sx={baseStyle.tablist}>
-        {projects.map((project) => (
-          <Tab key={project.title} sx={baseStyle.tablist}>
-            {project.title}
-          </Tab>
+        {projectData.projects.map((project) => (
+          <>
+            <Tab key={project.title} sx={baseStyle.tablist}>
+              {project.title}
+            </Tab>
+          </>
         ))}
       </TabList>
       <TabIndicator mt="-1.5px" height="2px" bg="#a8a8b3" borderRadius="1px" />
       <TabPanels sx={baseStyle.tabpanels}>
-        {projects.map((project) => (
+        {projectData.projects.map((project) => (
           <TabPanel key={project.title}>
             <Card margin="20px 0">
               <Image
@@ -70,9 +71,11 @@ export default function ProjectsTabs({ projects }: ProjectsTabsProps) {
               />
             </Card>
             <p>{project.description}</p>
+
             <Divider padding={"10px 0"} />
             <h4>Stack</h4>
-            {project.stack.map((tech) => (
+
+            {project.stack.map((tech: string) => (
               <Tag
                 key={tech}
                 size="md"

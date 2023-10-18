@@ -18,7 +18,7 @@ export default function EducationCard({
         <h5>{institution}</h5>
         <h4>{date}</h4>
       </Box>
-      <Text className="institution">{course}</Text>
+      <Text className="institution">{[course]}</Text>
       <div className="cross" />
     </EducationUnitCard>
   );

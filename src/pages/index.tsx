@@ -2,18 +2,21 @@ import { Box } from "@chakra-ui/react";
 import { HomeContainer } from "../styles/Home";
 import Image from "next/image";
 import Photo from "../assets/me.jpg";
+import { useContext } from "react";
+import { PortfolioContext } from "../context/PortfolioContext";
+import { enUS } from "../languages/english/enUS";
+import { elGR } from "../languages/greek/elGR";
 
 export default function Home() {
+  const { locale } = useContext(PortfolioContext)!;
+  const traduction = locale === "en" ? enUS : elGR;
   return (
     <HomeContainer>
       <Box className="bio">
         <Box marginBottom={20}>
           <h1 className="title">software</h1>
           <h1>developer</h1>
-          <h2>
-            Passionated developer with strong hard and soft skills, transforming
-            ideas into digital experiences.
-          </h2>
+          <h2>{traduction.home.subtitle}</h2>
         </Box>
       </Box>
       <Box className="sections">

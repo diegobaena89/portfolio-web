@@ -2,50 +2,51 @@ import JobCard from "@/src/components/JobCard";
 import { JobContainer } from "../../styles/Jobs";
 import { Box } from "@chakra-ui/react";
 import ProjectsTabs from "@/src/components/projectsTabs";
-import { projectData } from "@/src/mocks/projectData";
+
+import { useContext } from "react";
+import { PortfolioContext } from "@/src/context/PortfolioContext";
+import { enUS } from "@/src/languages/english/enUS";
+import { elGR } from "@/src/languages/greek/elGR";
 
 export default function Jobs() {
+  const { locale } = useContext(PortfolioContext)!;
+  const traduction = locale === "en" ? enUS : elGR;
+
   return (
     <JobContainer>
       <Box className="jobs">
         <Box>
-          <h1>work</h1>
-          <strong>experience</strong>
+          <h1>{traduction.about.jobs.work}</h1>
+          <strong>{traduction.about.jobs.experience}</strong>
         </Box>
         <Box>
           <JobCard
             company={"Bees Brasil"}
             date={"06/2022 - present"}
             position={"Frontend Developer"}
-            description={
-              "Front-end developer responsible for expanding and maintaining a B2B application using ReactJS and TypeScript. I created unit and component tests, implemented BFFs with Nest.js, and contributed to the development of a shared library to enhance usability across multiple teams."
-            }
+            description={traduction.about.jobs.bees}
           />
 
           <JobCard
             company={"Alpar"}
             date={"08/2021 - 06/2022"}
             position={"Software Developer"}
-            description={
-              "As a Software Developer at Alpar, I contributed as a ServiceNow developer for clients like Klabin and Localiza. I created service catalogs, widgets, customized business rules, and managed business flow and workflow. My skills included ServiceNow, JavaScript, AngularJS, and CSS, with a primary focus on using the ServiceNow platform for project execution."
-            }
+            description={traduction.about.jobs.alpar}
           />
 
           <JobCard
             company={"Capgemini"}
             date={"06/2021 - 08/2021"}
             position={"Fullstack Developer"}
-            description={
-              "I served as a Systems Analyst at Capgemini, focusing on full-stack development for the BNB project. I adeptly utilized technologies like Java Web, JavaScript, CSS, HTML, jQuery, PrimeFaces, and Semantic UI, along with tools like Sonar and Git for code quality and version control."
-            }
+            description={traduction.about.jobs.capgemini}
           />
         </Box>
       </Box>
 
       <Box className="projects">
-        <h2>projects</h2>
+        <h2>{traduction.about.projects.title}</h2>
         <Box>
-          <ProjectsTabs projects={projectData} />
+          <ProjectsTabs />
         </Box>
       </Box>
     </JobContainer>
