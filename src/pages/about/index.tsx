@@ -1,4 +1,3 @@
-import { AboutContainer } from "@/src/styles/About";
 import { Box, Text, Tooltip } from "@chakra-ui/react";
 import Link from "next/link";
 import {
@@ -14,12 +13,13 @@ import { PortfolioContext } from "@/src/context/PortfolioContext";
 import { enUS } from "@/src/languages/english/enUS";
 import { elGR } from "@/src/languages/greek/elGR";
 import objectToArray from "@/src/utils/objectToArray";
+import { AboutContainer, CustomButtom } from "./styles";
+import { handleDownloadCV } from "@/src/utils/handleDownloadCV";
 
 export default function About() {
   const { locale } = useContext(PortfolioContext)!;
   const traduction = locale === "en" ? enUS : elGR;
   const educationData = traduction.about.education;
-
   const education = objectToArray(educationData);
 
   return (
@@ -28,7 +28,7 @@ export default function About() {
         <h1>
           diego<strong>baena</strong>
         </h1>
-        <Box margin="20px 0">
+        <Box margin="40px 0">
           <Text fontSize={14} maxWidth={650} paddingBottom={4}>
             {traduction.about.bio.I}
           </Text>
@@ -45,6 +45,7 @@ export default function About() {
             alignItems={"center"}
             justifyContent={"space-around"}
             width="25%"
+            paddingTop={4}
           >
             <Link href="https://github.com/diegobaena89">
               <Tooltip
@@ -115,6 +116,14 @@ export default function About() {
               </Tooltip>
             </Link>
           </Box>
+        </Box>
+        <Box>
+          <Text fontSize={14} maxWidth={650} padding={4}>
+            You can also download my CV below
+          </Text>
+          <CustomButtom onClick={() => handleDownloadCV()}>
+            Download
+          </CustomButtom>
         </Box>
         <Box className="photo"></Box>
       </Box>

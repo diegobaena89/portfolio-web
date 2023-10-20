@@ -1,5 +1,5 @@
 import JobCard from "@/src/components/JobCard";
-import { JobContainer } from "../../styles/Jobs";
+import { JobContainer } from "./styles";
 import { Box } from "@chakra-ui/react";
 import ProjectsTabs from "@/src/components/projectsTabs";
 

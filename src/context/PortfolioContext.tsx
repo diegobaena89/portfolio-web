@@ -8,7 +8,7 @@ export type PortfolioContextType = {
   setLocale: React.Dispatch<React.SetStateAction<string>>;
   translation: any;
   setTranslation: React.Dispatch<React.SetStateAction<any>>;
-  handleToggle: () => void;
+  handleToggleLanguage: () => void;
 };
 
 export const PortfolioContext = createContext<PortfolioContextType | undefined>(
@@ -33,7 +33,7 @@ export const PortfolioProvider: React.FC<PortfolioProviderProps> = ({
     }
   };
 
-  const handleToggle = () => {
+  const handleToggleLanguage = () => {
     switch (locale) {
       case "en":
         setLocale("el");
@@ -52,7 +52,7 @@ export const PortfolioProvider: React.FC<PortfolioProviderProps> = ({
     () => ({
       locale,
       setLocale,
-      handleToggle,
+      handleToggleLanguage,
       translation,
       setTranslation,
     }),

@@ -10,6 +10,7 @@ import { elGR } from "../languages/greek/elGR";
 export default function Home() {
   const { locale } = useContext(PortfolioContext)!;
   const traduction = locale === "en" ? enUS : elGR;
+
   return (
     <HomeContainer>
       <Box className="bio">
