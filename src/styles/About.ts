@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/react";
-import { styled } from "../../styles";
-import { SectionContainer } from "../../styles/global";
+import { styled } from ".";
+import { SectionContainer } from "./global";
 
 export const AboutContainer = styled(SectionContainer, {
   flexDirection: "row",

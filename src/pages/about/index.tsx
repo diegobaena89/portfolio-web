@@ -13,7 +13,7 @@ import { PortfolioContext } from "@/src/context/PortfolioContext";
 import { enUS } from "@/src/languages/english/enUS";
 import { elGR } from "@/src/languages/greek/elGR";
 import objectToArray from "@/src/utils/objectToArray";
-import { AboutContainer, CustomButtom } from "./styles";
+import { AboutContainer, CustomButtom } from "../../styles/About";
 import { handleDownloadCV } from "@/src/utils/handleDownloadCV";
 
 export default function About() {

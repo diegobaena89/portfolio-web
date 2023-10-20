@@ -1,5 +1,5 @@
-import { styled } from "../../styles";
-import { SectionContainer } from "../../styles/global";
+import { styled } from ".";
+import { SectionContainer } from "./global";
 
 export const JobContainer = styled(SectionContainer, {
   flexDirection: "row",
