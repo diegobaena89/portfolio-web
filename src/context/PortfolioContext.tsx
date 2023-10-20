@@ -56,7 +56,7 @@ export const PortfolioProvider: React.FC<PortfolioProviderProps> = ({
       translation,
       setTranslation,
     }),
-    [locale, setLocale]
+    [handleToggleLanguage, locale, translation]
   );
 
   return (
