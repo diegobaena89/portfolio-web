@@ -53,7 +53,7 @@ export const JobContainer = styled(SectionContainer, {
 
     ".bot": {
       width: "100%",
-      height: "5%",
+      height: "3%",
       backgroundColor: "$orange400",
       margin: "3.5rem 0",
     },
