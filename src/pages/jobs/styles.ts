@@ -50,5 +50,12 @@ export const JobContainer = styled(SectionContainer, {
       letterSpacing: "0.2rem",
       fontWeight: 700,
     },
+
+    ".bot": {
+      width: "100%",
+      height: "5%",
+      backgroundColor: "$orange400",
+      margin: "3.5rem 0",
+    },
   },
 });

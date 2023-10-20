@@ -47,6 +47,7 @@ export default function Jobs() {
         <h2>{traduction.about.projects.title}</h2>
         <Box>
           <ProjectsTabs />
+          <Box className="bot"></Box>
         </Box>
       </Box>
     </JobContainer>
