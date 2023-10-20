@@ -28,7 +28,7 @@ export default function About() {
         <h1>
           diego<strong>baena</strong>
         </h1>
-        <Box margin="40px 0">
+        <Box margin="40px 0 10px">
           <Text fontSize={14} maxWidth={650} paddingBottom={4}>
             {traduction.about.bio.I}
           </Text>
@@ -118,8 +118,8 @@ export default function About() {
           </Box>
         </Box>
         <Box>
-          <Text fontSize={14} maxWidth={650} padding={4}>
-            You can also download my CV below
+          <Text fontSize={14} maxWidth={650} padding="15px 0">
+            {traduction.about.bio.download}
           </Text>
           <CustomButtom onClick={() => handleDownloadCV()}>
             Download

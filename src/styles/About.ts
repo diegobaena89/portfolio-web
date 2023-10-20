@@ -43,7 +43,7 @@ export const AboutContainer = styled(SectionContainer, {
 
     ".photo": {
       width: "90%",
-      height: "5%",
+      height: "3%",
       backgroundColor: "$lemon500",
       margin: "1rem 0",
     },

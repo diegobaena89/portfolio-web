@@ -1,13 +1,14 @@
 export const enUS = {
   home: {
     subtitle:
-      "Passionate developer with strong hard and soft skills, transforming ideas into digital experiences.",
+      "Passionate developer transforming ideas into digital experiences.",
   },
   about: {
     bio: {
       I: "Hello! I'm Diego, a technology enthusiast based in São Paulo , Brazil. My academic journey covers a wide range of fields. I have a background in Music, Literature, Analysis, and System Development. Additionally, I hold a master's degree in Modern Greek Language and Literature..",
       II: "Today, I am a passionate frontend developer. For me, software development is not just a profession; it's a way to merge creativity with technical skills. I collaborate with teams to craft engaging, functional interfaces connecting people to the digital world. My commitment to continuous learning and multidisciplinary approach provide a unique perspective when tackling software development challenges.",
       III: "I thrive on the opportunity to marry my creative and technical skills, constantly pushing the boundaries of whats possible in the ever-evolving world of technology.",
+      download: "You can also download my CV below",
     },
     education: {
       title: "Education",
