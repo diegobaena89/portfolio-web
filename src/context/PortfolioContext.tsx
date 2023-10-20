@@ -1,4 +1,4 @@
-import { createContext, useMemo, useState } from "react";
+import { createContext, useCallback, useMemo, useState } from "react";
 import { useRouter } from "next/router";
 import { enUS } from "../languages/english/enUS";
 import { elGR } from "../languages/greek/elGR";
@@ -25,15 +25,19 @@ export const PortfolioProvider: React.FC<PortfolioProviderProps> = ({
   const router = useRouter();
   const [locale, setLocale] = useState("en");
   const [translation, setTranslation] = useState({});
-  const verifyLocale = (locale: string) => {
-    if (locale === "en") {
-      setTranslation(enUS);
-    } else {
-      setTranslation(elGR);
-    }
-  };
 
-  const handleToggleLanguage = () => {
+  const verifyLocale = useCallback(
+    (locale: string) => {
+      if (locale === "en") {
+        setTranslation(enUS);
+      } else {
+        setTranslation(elGR);
+      }
+    },
+    [setTranslation]
+  );
+
+  const handleToggleLanguage = useCallback(() => {
     switch (locale) {
       case "en":
         setLocale("el");
@@ -46,7 +50,7 @@ export const PortfolioProvider: React.FC<PortfolioProviderProps> = ({
         router.push("/", "/", { locale: "en" });
         break;
     }
-  };
+  }, [locale, setLocale, verifyLocale, router]);
 
   const contextValue = useMemo(
     () => ({
