@@ -1,40 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Next.js](https://img.shields.io/badge/next.js-%23000000.svg?style=for-the-badge&logo=next.js&logoColor=white) ![Chakra UI](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white) ![Stitches](https://img.shields.io/badge/stitches-%23000000.svg?style=for-the-badge) ![i18n Next](https://img.shields.io/badge/i18n%20next-%23000000.svg?style=for-the-badge)
 
-First, run the development server:
+[About](#about) | [Features](#features) | [Layout](#screenshots) | [Getting Started](#getting-started)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📝 <a id="about"> **About** </a>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Welcome to my personal portfolio website built with Next.js, Chakra UI, Stitches, and i18n next. This portfolio showcases my work, projects, and skills as a developer. It's designed to provide visitors with an interactive and informative experience while highlighting my expertise in web development.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+You can also visit the deployed project [here](https://portfolio-web-uh92.vercel.app/el "here").
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Key Features:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Interactive Design: The portfolio is designed with a user-friendly and interactive interface to engage visitors and make navigation seamless.
 
-## Learn More
+- Multi-Language Support: I18n Next is integrated to provide translation support for multiple languages, making it accessible to a wider audience.
 
-To learn more about Next.js, take a look at the following resources:
+- Responsive Layout: The portfolio is responsive and optimized for various screen sizes and devices, ensuring a consistent experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Project Showcase: Highlight your work and projects with detailed descriptions, images, and links to the live demos or repositories.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Skill Display: Showcase your skills and expertise with a visually appealing representation to impress potential employers or collaborators.
 
-## Deploy on Vercel
+- Contact Information: Provide visitors with a convenient way to get in touch with you for inquiries, job opportunities, or collaborations.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🚀 <a id="features"> **Features** </a>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [x] Interactive UI/UX
+- [x] Multi-Language Support
+- [x] Responsive Design
+- [x] Project Showcase
+- [x] Skill Display
+- [x] Contact Information
+
+---
+
+<a id="screenshots"> **Layout** </a>
+
+![Layout](https://github.com/diegobaena89/portfolio-web/blob/main/src/assets/portfolio.png?raw=true "Layout")
+
+---
+
+📂 <a id="getting-started"> **Getting Started** </a>
+
+To run this project locally, follow these steps:
+
+       # Clone this repo
+    ❯ git clone https://github.com/diegobaena89/portfolio-web.git
+
+    # Enter on its directory
+    ❯ cd portfolio-web
+
+    # Launch the Application
+    ❯ yarn dev
