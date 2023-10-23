@@ -51,7 +51,7 @@ export const elGR = {
         stack: ["Typescript", "React", "Chrakra UI"],
         githubLink:
           "https://github.com/diegobaena89/coffee-develivery-ecommerce",
-        deployLink: "https://coffee-develivery-ecommerce.vercel.app/",
+        // deployLink: "https://coffee-develivery-ecommerce.vercel.app/",
         imgUrl:
           "https://github.com/diegobaena89/coffee-develivery-ecommerce/raw/main/src/assets/HomePage.png?raw=true",
       },
@@ -70,7 +70,7 @@ export const elGR = {
         imgUrl:
           "https://github.com/diegobaena89/waiter-app/raw/main/app/assets/layout.png",
         githubLink: "https://github.com/diegobaena89/waiter-app",
-        deployLink: "Link para o deploy do Projeto 1",
+        // deployLink: "Link para o deploy do Projeto 1",
       },
       ecommerce: {
         title: "E-commerce",

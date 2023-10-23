@@ -88,18 +88,22 @@ export default function ProjectsTabs() {
             ))}
 
             <Box padding="20px 0">
-              <CustomButtom
-                size="sm"
-                onClick={() => handleRedirect(project.githubLink)}
-              >
-                Github
-              </CustomButtom>
-              <CustomButtom
-                size="sm"
-                onClick={() => handleRedirect(project.deployLink)}
-              >
-                Deploy
-              </CustomButtom>
+              {project.githubLink && (
+                <CustomButtom
+                  size="sm"
+                  onClick={() => handleRedirect(project.githubLink)}
+                >
+                  Github
+                </CustomButtom>
+              )}
+              {project.deployLink && (
+                <CustomButtom
+                  size="sm"
+                  onClick={() => handleRedirect(project.deployLink)}
+                >
+                  Deploy
+                </CustomButtom>
+              )}
             </Box>
           </TabPanel>
         ))}
